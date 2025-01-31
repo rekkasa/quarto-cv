@@ -111,6 +111,28 @@ $endfor$
 % \titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{12pt plus 2pt minus 2pt}
 % \titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{12pt plus 2pt minus 2pt}
 
+% Custom section fonts
+\usepackage{sectsty}
+\usepackage{titlesec}
+
+% Define a short line (60% of text width)
+\newcommand{\sectionline}{\vspace{-1em}\centering\noindent\rule{0.6\textwidth}{0.4pt}}
+
+\titleformat{\section}
+  {\centering\Large\bfseries} % Formatting (centered, large, bold)
+  {} % No numbering
+  {0pt} % No spacing before title
+  {} % No extra code before title
+  [\sectionline] % Short horizontal rule under title
+
+\titleformat{\subsection}
+  {\centering\large\scshape} % Formatting (centered, small caps)
+  {} % No numbering
+  {0pt} % No spacing before title
+  {} % No extra code before title
+  [\sectionline] % Short horizontal rule under title
+
+
 % Use fontawesome. Note: you'll need TeXLive 2015. Update.
 $if(fontawesome)$\usepackage{fontawesome5}$endif$
 
